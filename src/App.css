@@ -155,3 +155,83 @@
      transform: translateY(-110vh);
    }
  }
+ /* Floating Hearts Styling */
+.floating-heart {
+  position: fixed;
+  bottom: -10px; /* Screen ke niche se start hoga */
+  color: #ff4d6d;
+  user-select: none;
+  pointer-events: none;
+  z-index: 999;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg); /* Screen ke top tak jayega */
+    opacity: 0;
+  }
+}
+
+/* Mouse Sparkle styling (Jo aapne pehle add kiya tha) */
+.sparkle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+/* Cursor Sparkle Styling */
+.cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.5rem;
+  z-index: 9999;
+  animation: sparkle-fade 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-fade {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -100%) scale(0.5); opacity: 0; }
+}
+
+/* Floating Hearts Styling */
+.floating-heart {
+  position: fixed;
+  bottom: -50px;
+  color: #ff4d6d;
+  font-size: 20px;
+  z-index: 999;
+  animation: floatUp linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Default cursor ko hide karke Heart wala look dene ke liye */
+.app-container {
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="font-size:20px"><text y="20">❤️</text></svg>'), auto;
+}
+
+/* Mouse hilane par jo sparkles ban rahe hain, unhe bhi heart kar dete hain */
+.cursor-sparkle {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1.2rem;
+  z-index: 9999;
+  animation: sparkle-fade 0.8s ease-out forwards;
+}
