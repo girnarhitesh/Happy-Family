@@ -235,3 +235,81 @@
   z-index: 9999;
   animation: sparkle-fade 0.8s ease-out forwards;
 }
+
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* 1. Tablets aur Bade Phones (768px se niche) */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+    width: 85%;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* 2. Standard Mobile Phones (480px se niche) */
+@media (max-width: 480px) {
+  body {
+    /* Mobile par scrolling allow karne ke liye agar content bada ho jaye */
+    overflow-y: auto; 
+    align-items: flex-start; /* Top se thoda space dikhe */
+    padding-top: 20px;
+  }
+
+  .container {
+    padding: 20px;
+    width: 88%;
+    margin-bottom: 20px;
+  }
+
+  .teddy img {
+    width: 100px; /* Teddy thoda chota */
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #birthdayMessage {
+    font-size: 14px; /* Text thoda readability ke liye adjust kiya */
+  }
+
+  /* Swiper ko mobile screen ke hisaab se adjust kiya */
+  .swiper {
+    width: 220px; 
+    height: 280px;
+  }
+
+  button {
+    width: 100%; /* Mobile par bade buttons touch karne mein aasaan hote hain */
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+/* 3. Bahut Chote Phones (320px se niche) */
+@media (max-width: 320px) {
+  .swiper {
+    width: 180px;
+    height: 240px;
+  }
+  
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* 4. Landscape Mode (Jab phone tircha ho) */
+@media (max-height: 500px) {
+  body {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  .container {
+    margin: 20px 0;
+  }
+}
